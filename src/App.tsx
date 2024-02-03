@@ -1,9 +1,10 @@
 import './App.scss';
+import Board from './components/board/Board';
 
 function App() {
   return (
     <div className="App">
-
+      <Board />
     </div>
   );
 }
