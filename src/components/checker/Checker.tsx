@@ -5,10 +5,15 @@ interface CheckerPropsInterface {
     index: number;
 }
 
+const BOX_SIZE = 55;
+
 function Checker(props: CheckerPropsInterface) {
     const style = {
-        transform: `translateY(${props.index ? props.index * 5 : props.index}px)`
+        bottom: `${props.index * BOX_SIZE / 3}px`,
+        width: `${BOX_SIZE}px`,
+        height: `${BOX_SIZE}px`
     }
+
     return <div className="checker" style={style}>
 
     </div>
