@@ -10,11 +10,16 @@ export interface FieldPropsInterface {
 function Field(props: FieldPropsInterface) {
 
     const checkers = [];
-    console.log(props);
+    // console.log(props);
+
+    const changeField = (index: number) => {
+        console.log(props);
+        console.log(index);
+    }
 
     if (!props.index) {
         for (let i = 0; i < 15; i++) {
-            checkers.push(<Checker key={i} index={i}/>)
+            checkers.push(<Checker key={i} index={i} onChangeField={changeField} fieldIndex={props.index}/>)
         }
     }
 

@@ -4,6 +4,7 @@
     height: 800px;
     border: 15px solid #A37852;
     background-color: #643f20;
+    position: relative;
 }
 
 .up, .down {
@@ -21,4 +22,11 @@
 .down {
     border-top: 10px solid #A37852;
     align-items: end;
+}
+
+.cubes {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
 }

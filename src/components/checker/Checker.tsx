@@ -3,6 +3,8 @@ import './Checker.scss';
 
 interface CheckerPropsInterface {
     index: number;
+    fieldIndex: number;
+    onChangeField: (index: number) => void
 }
 
 const BOX_SIZE = 55;
@@ -14,7 +16,9 @@ function Checker(props: CheckerPropsInterface) {
         height: `${BOX_SIZE}px`
     }
 
-    return <div className="checker" style={style}>
+    const {onChangeField} = props;
+
+    return <div className="checker" style={style} onClick={() => onChangeField(props.index)}>
 
     </div>
 }
